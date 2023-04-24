@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var search: String = ""
+    @StateObject var viewModel = ContentViewModel()
+    
     var body: some View {
         ZStack{
             
@@ -27,6 +29,8 @@ struct ContentView: View {
                     .background(RoundedRectangle(cornerRadius: 20))
                     .frame(width: 100, height: 4)
                 }
+                GameCardView()
+                
             }
             .padding()
         }

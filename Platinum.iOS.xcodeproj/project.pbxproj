@@ -17,6 +17,8 @@
 		CE62C81129F6786800E3BB50 /* AuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81029F6786800E3BB50 /* AuthDataModel.swift */; };
 		CE62C81329F678C200E3BB50 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81229F678C200E3BB50 /* TokenModel.swift */; };
 		CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81429F678EE00E3BB50 /* RegDataModel.swift */; };
+		CE62C81929F67B7200E3BB50 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */; };
+		CE62C81B29F67D4100E3BB50 /* GameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81A29F67D4100E3BB50 /* GameCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		CE62C81029F6786800E3BB50 /* AuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataModel.swift; sourceTree = "<group>"; };
 		CE62C81229F678C200E3BB50 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		CE62C81429F678EE00E3BB50 /* RegDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDataModel.swift; sourceTree = "<group>"; };
+		CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CE62C81A29F67D4100E3BB50 /* GameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		CE62C7F829F66EA600E3BB50 /* Platinum.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CE62C81729F67B3C00E3BB50 /* ViewModels */,
+				CE62C81629F67AFB00E3BB50 /* Views */,
 				CE62C80729F6758C00E3BB50 /* Models */,
 				CE62C7F929F66EA600E3BB50 /* Platinum_iOSApp.swift */,
 				CE62C7FB29F66EA600E3BB50 /* ContentView.swift */,
@@ -91,6 +97,22 @@
 				CE62C81429F678EE00E3BB50 /* RegDataModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE62C81629F67AFB00E3BB50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE62C81A29F67D4100E3BB50 /* GameCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE62C81729F67B3C00E3BB50 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +190,10 @@
 				CE62C81329F678C200E3BB50 /* TokenModel.swift in Sources */,
 				CE62C80F29F6780300E3BB50 /* CommentModel.swift in Sources */,
 				CE62C81129F6786800E3BB50 /* AuthDataModel.swift in Sources */,
+				CE62C81929F67B7200E3BB50 /* ContentViewModel.swift in Sources */,
 				CE62C7FA29F66EA600E3BB50 /* Platinum_iOSApp.swift in Sources */,
 				CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */,
+				CE62C81B29F67D4100E3BB50 /* GameCardView.swift in Sources */,
 				CE62C80D29F6779800E3BB50 /* Achivement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
