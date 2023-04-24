@@ -8,16 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var search: String = ""
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack{
+            
+            
+            VStack {
+                
+                HStack{
+                    TextField("Поиск", text:$search)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    Button("Найти"){
+                        
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(RoundedRectangle(cornerRadius: 20))
+                    .frame(width: 100, height: 4)
+                }
+            }
+            .padding()
         }
-        .padding()
+        
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

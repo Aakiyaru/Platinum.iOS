@@ -11,6 +11,12 @@
 		CE62C7FC29F66EA600E3BB50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C7FB29F66EA600E3BB50 /* ContentView.swift */; };
 		CE62C7FE29F66EA700E3BB50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE62C7FD29F66EA700E3BB50 /* Assets.xcassets */; };
 		CE62C80129F66EA700E3BB50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE62C80029F66EA700E3BB50 /* Preview Assets.xcassets */; };
+		CE62C80B29F675AD00E3BB50 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C80A29F675AD00E3BB50 /* Game.swift */; };
+		CE62C80D29F6779800E3BB50 /* Achivement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C80C29F6779800E3BB50 /* Achivement.swift */; };
+		CE62C80F29F6780300E3BB50 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C80E29F6780300E3BB50 /* CommentModel.swift */; };
+		CE62C81129F6786800E3BB50 /* AuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81029F6786800E3BB50 /* AuthDataModel.swift */; };
+		CE62C81329F678C200E3BB50 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81229F678C200E3BB50 /* TokenModel.swift */; };
+		CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81429F678EE00E3BB50 /* RegDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		CE62C7FB29F66EA600E3BB50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE62C7FD29F66EA700E3BB50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE62C80029F66EA700E3BB50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE62C80A29F675AD00E3BB50 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CE62C80C29F6779800E3BB50 /* Achivement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achivement.swift; sourceTree = "<group>"; };
+		CE62C80E29F6780300E3BB50 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		CE62C81029F6786800E3BB50 /* AuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataModel.swift; sourceTree = "<group>"; };
+		CE62C81229F678C200E3BB50 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		CE62C81429F678EE00E3BB50 /* RegDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 		CE62C7F829F66EA600E3BB50 /* Platinum.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CE62C80729F6758C00E3BB50 /* Models */,
 				CE62C7F929F66EA600E3BB50 /* Platinum_iOSApp.swift */,
 				CE62C7FB29F66EA600E3BB50 /* ContentView.swift */,
 				CE62C7FD29F66EA700E3BB50 /* Assets.xcassets */,
@@ -65,6 +78,19 @@
 				CE62C80029F66EA700E3BB50 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE62C80729F6758C00E3BB50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE62C80A29F675AD00E3BB50 /* Game.swift */,
+				CE62C80C29F6779800E3BB50 /* Achivement.swift */,
+				CE62C80E29F6780300E3BB50 /* CommentModel.swift */,
+				CE62C81029F6786800E3BB50 /* AuthDataModel.swift */,
+				CE62C81229F678C200E3BB50 /* TokenModel.swift */,
+				CE62C81429F678EE00E3BB50 /* RegDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE62C7FC29F66EA600E3BB50 /* ContentView.swift in Sources */,
+				CE62C80B29F675AD00E3BB50 /* Game.swift in Sources */,
+				CE62C81329F678C200E3BB50 /* TokenModel.swift in Sources */,
+				CE62C80F29F6780300E3BB50 /* CommentModel.swift in Sources */,
+				CE62C81129F6786800E3BB50 /* AuthDataModel.swift in Sources */,
 				CE62C7FA29F66EA600E3BB50 /* Platinum_iOSApp.swift in Sources */,
+				CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */,
+				CE62C80D29F6779800E3BB50 /* Achivement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
