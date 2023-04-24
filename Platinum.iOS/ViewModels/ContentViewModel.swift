@@ -31,6 +31,10 @@ class ContentViewModel: ObservableObject{
         games.append(Game(id: 1, name: "GoW", cover: "", developer: "", publisher: "", realease: ""))
     }
     
+    func FindGameList(){
+        games.append(Game(id: 1, name: "GoW", cover: "", developer: "", publisher: "", realease: ""))
+    }
+    
     func GetGame(){
         print("game")
     }

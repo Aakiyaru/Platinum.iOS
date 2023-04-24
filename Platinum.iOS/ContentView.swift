@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Platinum.iOS
-//
-//  Created by User on 24.04.2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -12,29 +5,50 @@ struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
     
     var body: some View {
-        ZStack{
+        ZStack(alignment: .top){
+            Color("LogoBgColor")
+                .ignoresSafeArea()
             
-            
-            VStack {
+            VStack{
+                
+                HStack{
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 200, height: 50)
+                }
+                .frame(width: 400, height: 100)
+                .background(Color("LogoBgColor"))
+                .ignoresSafeArea()
+                
                 
                 HStack{
                     TextField("Поиск", text:$search)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                     Button("Найти"){
-                        
+                        viewModel.FindGameList()
                     }
                     .padding()
                     .foregroundColor(.white)
                     .background(RoundedRectangle(cornerRadius: 20))
                     .frame(width: 100, height: 4)
                 }
-                GameCardView()
                 
+                NavigationLink(destination: View2())
+                {
+                    GameCardView()
+                }
             }
+            .background(Color("BgColor"))
             .padding()
         }
         
+    }
+}
+
+struct View2: View{
+    var body: some View{
+        Text("God of War")
     }
 }
 
