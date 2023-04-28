@@ -19,6 +19,7 @@
 		CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81429F678EE00E3BB50 /* RegDataModel.swift */; };
 		CE62C81929F67B7200E3BB50 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */; };
 		CE62C81B29F67D4100E3BB50 /* GameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81A29F67D4100E3BB50 /* GameCardView.swift */; };
+		CECDB12729FB920700C267ED /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB12629FB920700C267ED /* BannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		CE62C81429F678EE00E3BB50 /* RegDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDataModel.swift; sourceTree = "<group>"; };
 		CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CE62C81A29F67D4100E3BB50 /* GameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardView.swift; sourceTree = "<group>"; };
+		CECDB12629FB920700C267ED /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				CE62C81A29F67D4100E3BB50 /* GameCardView.swift */,
+				CECDB12629FB920700C267ED /* BannerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				CE62C81929F67B7200E3BB50 /* ContentViewModel.swift in Sources */,
 				CE62C7FA29F66EA600E3BB50 /* Platinum_iOSApp.swift in Sources */,
 				CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */,
+				CECDB12729FB920700C267ED /* BannerView.swift in Sources */,
 				CE62C81B29F67D4100E3BB50 /* GameCardView.swift in Sources */,
 				CE62C80D29F6779800E3BB50 /* Achivement.swift in Sources */,
 			);

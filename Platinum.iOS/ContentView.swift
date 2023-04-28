@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var search: String = ""
-    @StateObject var viewModel = ContentViewModel()
+    @EnvironmentObject var viewModel: ContentViewModel
     
     var body: some View {
         ZStack(alignment: .top){
@@ -10,17 +10,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack{
-                
-                HStack{
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 200, height: 50)
-                }
-                .frame(width: 400, height: 100)
-                .background(Color("LogoBgColor"))
-                .ignoresSafeArea()
-                
-                
+                BannerView()
                 HStack{
                     TextField("Поиск", text:$search)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -34,27 +24,21 @@ struct ContentView: View {
                     .frame(width: 100, height: 4)
                 }
                 
-                NavigationLink(destination: View2())
-                {
-                    GameCardView()
-                }
+                GameCardView(game: viewModel.games[0])
             }
             .background(Color("BgColor"))
             .padding()
         }
-        
+        .environmentObject(viewModel)
+        .onAppear{
+            viewModel.GetGameList()
+        }
     }
 }
-
-struct View2: View{
-    var body: some View{
-        Text("God of War")
-    }
-}
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ContentViewModel())
     }
 }

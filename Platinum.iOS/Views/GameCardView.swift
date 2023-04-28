@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 struct GameCardView: View{
-    @StateObject var viewModel = ContentViewModel()
+    var game: Game
     
     var body: some View{
         HStack{
-            AsyncImage(url: URL(string: "https://cdn1.epicgames.com/offer/3ddd6a590da64e3686042d108968a6b2/EGS_GodofWar_SantaMonicaStudio_S2_1200x1600-fbdf3cbc2980749091d52751ffabb7b7_1200x1600-fbdf3cbc2980749091d52751ffabb7b7")) { image in
+            AsyncImage(url: URL(string: game.cover)) { image in
                     image
                         .resizable()
                 } placeholder: {
@@ -23,11 +23,11 @@ struct GameCardView: View{
                 .background(Color.gray)
             
             VStack(alignment: .leading){
-                Text("God of War (2018)")
+                Text(game.name)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
                     .bold()
-                Text("Santa Monica Studio")
+                Text(game.developer)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.leading)
             }
