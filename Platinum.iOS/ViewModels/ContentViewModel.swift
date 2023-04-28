@@ -53,15 +53,23 @@ class ContentViewModel: ObservableObject{
                           realease: ""))
     }
     
-    func GetGame(){
+    func GetGame(ggame: Game){
         print("game")
-        game = games[1]
+        game = ggame
     }
     
     func GetAchivementList(gameId:Int){
         print("achivements list")
         achivements = []
-        achivements.append(Achivement(id: 1, name: "Acw", description: "dawda", gameId: 1, icon: ""))
+        if (gameId == 1)
+        {
+            achivements.append(Achivement(id: 1, name: "God of war ach", description: "dawda", gameId: 1, icon: ""))
+        }
+        else
+        {
+            achivements.append(Achivement(id: 2, name: "RDR2 ach", description: "wdas", gameId: 2, icon: ""))
+        }
+        
     }
     
     func GetAchivement(gameId:Int, id:Int){

@@ -36,7 +36,8 @@ struct ContentView: View
                     {
                         ForEach(viewModel.games, id: \.self)
                         {game in
-                            NavigationLink(destination: GameView())
+                            
+                            NavigationLink(destination: GameView(game: game))
                             {
                                 GameCardView(game: game)
                             }

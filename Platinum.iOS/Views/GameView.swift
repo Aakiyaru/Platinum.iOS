@@ -3,6 +3,7 @@ import SwiftUI
 struct GameView: View
 {
     @EnvironmentObject var viewModel : ContentViewModel
+    var game: Game
     
     var body: some View
     {
@@ -62,7 +63,7 @@ struct GameView: View
             }
             .onAppear
             {
-                viewModel.GetGame()
+                viewModel.GetGame(ggame: game)
                 viewModel.GetAchivementList(gameId: viewModel.game.id)
             }
         }

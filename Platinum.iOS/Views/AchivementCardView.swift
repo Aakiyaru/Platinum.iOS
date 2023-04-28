@@ -24,7 +24,7 @@ struct AchivementCardView: View{
             
             VStack(alignment: .leading){
                 Text(achivement.name)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
                     .bold()
                 Text(achivement.description)
