@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Comment{
+struct Comment: Hashable{
     var id: Int
     var userId: Int
     var achivementId: Int

@@ -15,8 +15,8 @@ struct BannerView: View{
                 .resizable()
                 .frame(width: 200, height: 50)
         }
-        .frame(width: 400, height: 100)
+        .frame(width: 400, height: 80)
         .background(Color("LogoBgColor"))
-        .ignoresSafeArea()
+        .padding(0)
     }
 }

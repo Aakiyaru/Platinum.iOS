@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct AuthData{
+struct AuthData: Hashable{
     var login: String
     var password: String
 }

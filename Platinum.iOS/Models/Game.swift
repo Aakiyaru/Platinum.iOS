@@ -1,6 +1,6 @@
 import Foundation
 
-struct Game{
+struct Game: Hashable{
     var id: Int
     var name: String
     var cover: String

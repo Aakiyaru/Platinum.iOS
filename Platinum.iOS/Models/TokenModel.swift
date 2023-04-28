@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Token{
+struct Token: Hashable{
     var access_token: String
     var username: String
 }
