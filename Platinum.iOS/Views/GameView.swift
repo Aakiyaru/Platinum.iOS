@@ -15,7 +15,7 @@ struct GameView: View
                     BannerView()
                         .padding(-10)
                     
-                    HStack
+                    HStack (alignment: .top)
                     {
                         AsyncImage(url: URL(string: viewModel.game.cover)) { image in
                                 image
@@ -23,17 +23,29 @@ struct GameView: View
                             } placeholder: {
                                 ProgressView()
                             }
-                            .frame(width: 70, height: 100)
+                            .frame(width: 100, height: 130)
                             .background(Color.gray)
-                        VStack
+                        VStack (alignment: .leading)
                         {
                             Text(viewModel.game.name)
-                            Text(viewModel.game.developer)
-                            Text(viewModel.game.publisher)
-                            Text(viewModel.game.realease)
+                                .multilineTextAlignment(.leading)
+                                .bold()
+                                .foregroundColor(.white)
+                            Text("Разработчик: " + viewModel.game.developer)
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(.gray)
+                            Text("Издатель: " + viewModel.game.publisher)
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(.gray)
+                            Text("Релиз: " + viewModel.game.realease)
+                                .fontWeight(.light)
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(.gray)
                         }
                     }
-                    .padding()
+                    .frame(width: 400, height: 150)
+                    .background(Color("SearchBg"))
+                    .padding(.bottom, -10)
                     
                     List
                     {

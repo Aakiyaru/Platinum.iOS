@@ -39,8 +39,8 @@ class ContentViewModel: ObservableObject{
                           name: "Red Dead Redemption 2",
                           cover: "https://avatars.mds.yandex.net/get-mpic/5235182/img_id6251776639395582946.jpeg/orig",
                           developer: "Rockstar Games",
-                          publisher: "",
-                          realease: ""))
+                          publisher: "Rockstar Games",
+                          realease: "21.11.2018"))
     }
     
     func FindGameList(){

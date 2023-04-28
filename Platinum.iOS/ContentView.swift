@@ -30,6 +30,7 @@ struct ContentView: View
                         .frame(width: 100, height: 4)
                     }
                     .background(Color("SearchBg"))
+                    .padding(.bottom, -10.0)
                     
                     List
                     {
