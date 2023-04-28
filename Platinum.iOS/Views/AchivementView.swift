@@ -12,10 +12,8 @@ struct AchivementView: View
 {
     var body: some View
     {
-        NavigationView
-        {
-            Text("Hwewe")
-        }
-        .navigationBarBackButtonHidden(true)
+        Text("Hwewe")
+        .navigationTitle(Text("Achivement"))
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

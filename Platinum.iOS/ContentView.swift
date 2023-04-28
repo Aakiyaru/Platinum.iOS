@@ -51,6 +51,7 @@ struct ContentView: View
                 viewModel.GetGameList()
             }
         }
+        .navigationTitle(Text("Главная"))
     }
 }
 
