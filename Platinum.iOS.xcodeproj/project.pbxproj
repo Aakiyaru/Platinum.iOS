@@ -11,6 +11,22 @@
 		CE62C7FC29F66EA600E3BB50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C7FB29F66EA600E3BB50 /* ContentView.swift */; };
 		CE62C7FE29F66EA700E3BB50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE62C7FD29F66EA700E3BB50 /* Assets.xcassets */; };
 		CE62C80129F66EA700E3BB50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE62C80029F66EA700E3BB50 /* Preview Assets.xcassets */; };
+		CE62C80B29F675AD00E3BB50 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C80A29F675AD00E3BB50 /* Game.swift */; };
+		CE62C80D29F6779800E3BB50 /* Achivement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C80C29F6779800E3BB50 /* Achivement.swift */; };
+		CE62C80F29F6780300E3BB50 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C80E29F6780300E3BB50 /* CommentModel.swift */; };
+		CE62C81129F6786800E3BB50 /* AuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81029F6786800E3BB50 /* AuthDataModel.swift */; };
+		CE62C81329F678C200E3BB50 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81229F678C200E3BB50 /* TokenModel.swift */; };
+		CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81429F678EE00E3BB50 /* RegDataModel.swift */; };
+		CE62C81929F67B7200E3BB50 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */; };
+		CE62C81B29F67D4100E3BB50 /* GameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62C81A29F67D4100E3BB50 /* GameCardView.swift */; };
+		CECDB12729FB920700C267ED /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB12629FB920700C267ED /* BannerView.swift */; };
+		CECDB12929FB9F8B00C267ED /* AchivementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB12829FB9F8B00C267ED /* AchivementCardView.swift */; };
+		CECDB12B29FBA4E600C267ED /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB12A29FBA4E600C267ED /* GameView.swift */; };
+		CECDB12D29FBABD900C267ED /* AchivementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDB12C29FBABD900C267ED /* AchivementView.swift */; };
+		CED4C7382A0F22150067771D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CED4C7372A0F22150067771D /* Alamofire */; };
+		CED4C73B2A0F264E0067771D /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4C73A2A0F264E0067771D /* GameCard.swift */; };
+		CED4C73D2A0F2D370067771D /* CommentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4C73C2A0F2D370067771D /* CommentCardView.swift */; };
+		CED4C7402A0F362D0067771D /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4C73F2A0F362D0067771D /* ViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +35,22 @@
 		CE62C7FB29F66EA600E3BB50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE62C7FD29F66EA700E3BB50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE62C80029F66EA700E3BB50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE62C80A29F675AD00E3BB50 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CE62C80C29F6779800E3BB50 /* Achivement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achivement.swift; sourceTree = "<group>"; };
+		CE62C80E29F6780300E3BB50 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		CE62C81029F6786800E3BB50 /* AuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataModel.swift; sourceTree = "<group>"; };
+		CE62C81229F678C200E3BB50 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		CE62C81429F678EE00E3BB50 /* RegDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDataModel.swift; sourceTree = "<group>"; };
+		CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CE62C81A29F67D4100E3BB50 /* GameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardView.swift; sourceTree = "<group>"; };
+		CECDB12629FB920700C267ED /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		CECDB12829FB9F8B00C267ED /* AchivementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementCardView.swift; sourceTree = "<group>"; };
+		CECDB12A29FBA4E600C267ED /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		CECDB12C29FBABD900C267ED /* AchivementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivementView.swift; sourceTree = "<group>"; };
+		CED4C7392A0F24F30067771D /* Platinum-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Platinum-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CED4C73A2A0F264E0067771D /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
+		CED4C73C2A0F2D370067771D /* CommentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardView.swift; sourceTree = "<group>"; };
+		CED4C73F2A0F362D0067771D /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED4C7382A0F22150067771D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +84,11 @@
 		CE62C7F829F66EA600E3BB50 /* Platinum.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CED4C73E2A0F36130067771D /* Extensions */,
+				CED4C7392A0F24F30067771D /* Platinum-iOS-Info.plist */,
+				CE62C81729F67B3C00E3BB50 /* ViewModels */,
+				CE62C81629F67AFB00E3BB50 /* Views */,
+				CE62C80729F6758C00E3BB50 /* Models */,
 				CE62C7F929F66EA600E3BB50 /* Platinum_iOSApp.swift */,
 				CE62C7FB29F66EA600E3BB50 /* ContentView.swift */,
 				CE62C7FD29F66EA700E3BB50 /* Assets.xcassets */,
@@ -65,6 +103,49 @@
 				CE62C80029F66EA700E3BB50 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE62C80729F6758C00E3BB50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE62C80A29F675AD00E3BB50 /* Game.swift */,
+				CE62C80C29F6779800E3BB50 /* Achivement.swift */,
+				CE62C80E29F6780300E3BB50 /* CommentModel.swift */,
+				CE62C81029F6786800E3BB50 /* AuthDataModel.swift */,
+				CE62C81229F678C200E3BB50 /* TokenModel.swift */,
+				CE62C81429F678EE00E3BB50 /* RegDataModel.swift */,
+				CED4C73A2A0F264E0067771D /* GameCard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE62C81629F67AFB00E3BB50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE62C81A29F67D4100E3BB50 /* GameCardView.swift */,
+				CECDB12629FB920700C267ED /* BannerView.swift */,
+				CECDB12829FB9F8B00C267ED /* AchivementCardView.swift */,
+				CECDB12A29FBA4E600C267ED /* GameView.swift */,
+				CECDB12C29FBABD900C267ED /* AchivementView.swift */,
+				CED4C73C2A0F2D370067771D /* CommentCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE62C81729F67B3C00E3BB50 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CED4C73E2A0F36130067771D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CED4C73F2A0F362D0067771D /* ViewExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +164,9 @@
 			dependencies = (
 			);
 			name = Platinum.iOS;
+			packageProductDependencies = (
+				CED4C7372A0F22150067771D /* Alamofire */,
+			);
 			productName = Platinum.iOS;
 			productReference = CE62C7F629F66EA600E3BB50 /* Platinum.iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +195,9 @@
 				Base,
 			);
 			mainGroup = CE62C7ED29F66EA600E3BB50;
+			packageReferences = (
+				CED4C7362A0F22150067771D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CE62C7F729F66EA600E3BB50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +224,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECDB12929FB9F8B00C267ED /* AchivementCardView.swift in Sources */,
 				CE62C7FC29F66EA600E3BB50 /* ContentView.swift in Sources */,
+				CED4C7402A0F362D0067771D /* ViewExt.swift in Sources */,
+				CECDB12D29FBABD900C267ED /* AchivementView.swift in Sources */,
+				CE62C80B29F675AD00E3BB50 /* Game.swift in Sources */,
+				CE62C81329F678C200E3BB50 /* TokenModel.swift in Sources */,
+				CE62C80F29F6780300E3BB50 /* CommentModel.swift in Sources */,
+				CE62C81129F6786800E3BB50 /* AuthDataModel.swift in Sources */,
+				CE62C81929F67B7200E3BB50 /* ContentViewModel.swift in Sources */,
+				CED4C73D2A0F2D370067771D /* CommentCardView.swift in Sources */,
 				CE62C7FA29F66EA600E3BB50 /* Platinum_iOSApp.swift in Sources */,
+				CE62C81529F678EE00E3BB50 /* RegDataModel.swift in Sources */,
+				CED4C73B2A0F264E0067771D /* GameCard.swift in Sources */,
+				CECDB12729FB920700C267ED /* BannerView.swift in Sources */,
+				CE62C81B29F67D4100E3BB50 /* GameCardView.swift in Sources */,
+				CECDB12B29FBA4E600C267ED /* GameView.swift in Sources */,
+				CE62C80D29F6779800E3BB50 /* Achivement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +371,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Platinum.iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Platinum-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +400,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Platinum.iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Platinum-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,6 +441,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CED4C7362A0F22150067771D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CED4C7372A0F22150067771D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED4C7362A0F22150067771D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE62C7EE29F66EA600E3BB50 /* Project object */;
 }

@@ -1,26 +1,65 @@
-//
-//  ContentView.swift
-//  Platinum.iOS
-//
-//  Created by User on 24.04.2023.
-//
-
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+struct ContentView: View
+{
+    @State var search: String = ""
+    @EnvironmentObject var viewModel: ContentViewModel
+    
+    var body: some View
+    {
+        NavigationView
+        {
+            ZStack(alignment: .top)
+            {
+                VStack
+                {
+                    BannerView()
+                        .padding(-10)
+                    HStack
+                    {
+                        TextField("Поиск", text:$search)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding()
+                        Button("Найти")
+                        {
+                            viewModel.FindGameList(searchString: search)
+                        }
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(RoundedRectangle(cornerRadius: 20))
+                        .frame(width: 100, height: 4)
+                    }
+                    .background(Color("SearchBg"))
+                    .padding(.bottom, -10.0)
+                    
+                    List
+                    {
+                        ForEach(viewModel.games, id: \.self)
+                        {game in
+                            
+                            NavigationLink(destination: GameView(game: game))
+                            {
+                                GameCardView(game: game)
+                            }
+                        }
+                    }
+                }
+            }
+            .environmentObject(viewModel)
+            .onAppear
+            {
+                viewModel.GetGameList()
+            }
         }
-        .padding()
+        .navigationTitle(Text("Главная"))
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+struct ContentView_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
         ContentView()
+            .environmentObject(ContentViewModel())
     }
 }
