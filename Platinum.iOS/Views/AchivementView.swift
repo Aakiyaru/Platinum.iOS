@@ -42,11 +42,17 @@ struct AchivementView: View
                 
                 List
                 {
-                    ForEach(viewModel.comments, id: \.self)
-                    {comment in
-                        CommentCardView(comment: comment)
+                    if (viewModel.comments == [])
+                    {
+                        Text("Подсказок нет")
                     }
-
+                    else
+                    {
+                        ForEach(viewModel.comments, id: \.self)
+                        {comment in
+                            CommentCardView(comment: comment)
+                        }
+                    }
                 }
             }
         }

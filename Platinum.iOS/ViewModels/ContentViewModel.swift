@@ -1,9 +1,13 @@
+//MARK: - ViewModel приложения, в котором расположены методы для работы с данными
+
 import Foundation
 import Alamofire
 
 class ContentViewModel: ObservableObject
 {
+    //массив игр
     @Published var games : [GameCard] = []
+    //одна конкретная игра
     @Published var game: Game = Game(
         id: 0,
         name: "",
@@ -12,55 +16,68 @@ class ContentViewModel: ObservableObject
         publisher: "",
         realease: ""
     )
+    //массив достижений
     @Published var achivements: [Achivement] = []
+    //массив комментариев
     @Published var comments: [Comment] = []
+    //один конкретный комментарий
     @Published var comment: Comment = Comment(
         id: 0,
         userId: 0,
         achivementId: 0,
         text: ""
     )
-    @Published var userName: String = ""
     
-    func GetGameList(){
+    //функция, которая получает список игр с сервера
+    func GetGameList()
+    {
         print("game list")
         games = []
         AF
             .request("http://aakiyaru23-001-site1.atempurl.com/games")
             .responseDecodable(of: [GameCard].self) {response in
-                if response.value != nil{
+                if response.value != nil
+                {
                     self.games = response.value!
                 }
             }
     }
     
-    func FindGameList(searchString: String){
+    //получает список игр, совпадающих со строкой поиска
+    func FindGameList(searchString: String)
+    {
         games = []
         AF
             .request("http://aakiyaru23-001-site1.atempurl.com/games/search",
                      method: .get,
                      parameters: ["searchString" : searchString])
             .responseDecodable(of: [GameCard].self) {response in
-                if response.value != nil{
+                if response.value != nil
+                {
                     self.games = response.value!
                 }
             }
     }
     
-    func GetGame(ggame: GameCard){
+    //получает расширенные данные о конкретной игре
+    func GetGame(ggame: GameCard)
+    {
         print("game")
         
         AF
             .request("http://aakiyaru23-001-site1.atempurl.com/games/\(ggame.id)",
                      method: .get)
             .responseDecodable(of: Game.self) {response in
-                if response.value != nil{
+                if response.value != nil
+                {
                     self.game = response.value!
                 }
             }
     }
     
-    func GetAchivementList(gameId:Int){
+    //получает список достижений по игре
+    func GetAchivementList(gameId:Int)
+    {
         print("achivements list")
         achivements = []
         AF
@@ -68,14 +85,17 @@ class ContentViewModel: ObservableObject
                      method: .get,
                      parameters: ["gameId":gameId])
             .responseDecodable(of: [Achivement].self) {response in
-                if response.value != nil{
+                if response.value != nil
+                {
                     self.achivements = response.value!
                 }
             }
         
     }
     
-    func GetCommentsList(achivementId: Int){
+    //получает список комментариев по достижению
+    func GetCommentsList(achivementId: Int)
+    {
         print("comments list")
         comments = []
         
@@ -84,13 +104,17 @@ class ContentViewModel: ObservableObject
                      method: .get,
                      parameters: ["achivementId":achivementId])
             .responseDecodable(of: [Comment].self) {response in
-                if response.value != nil{
+                if response.value != nil
+                {
                     self.comments = response.value!
                 }
             }
     }
     
-    func AddComment(userId: Int, text: String, AchivementId: Int){
+    //отправляет введённый комментарий на сервер
+    //TODO: - сделать ввод комментариев
+    func AddComment(userId: Int, text: String, AchivementId: Int)
+    {
         print("add comment")
     }
 }
