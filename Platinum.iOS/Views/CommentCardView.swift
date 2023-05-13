@@ -7,7 +7,7 @@ struct CommentCardView: View{
     var body: some View{
         HStack{
             VStack(alignment: .leading){
-                Text("Пользователь #\(comment.id)")
+                Text("Пользователь #\(comment.userId)")
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
                     .bold()

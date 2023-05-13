@@ -117,4 +117,19 @@ class ContentViewModel: ObservableObject
     {
         print("add comment")
     }
+    
+    func RegUser(login: String, username: String, password: String) -> Bool
+    {
+        AF
+            .request("http://aakiyaru23-001-site1.atempurl.com/users/reg",
+                     method: .post,
+                     parameters: ["login": login, "username": username, "password": password])
+        
+        return true
+    }
+    
+    func CheckAuth()
+    {
+        
+    }
 }
