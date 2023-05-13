@@ -4,6 +4,7 @@ import SwiftUI
 struct AchivementView: View
 {
     @EnvironmentObject var viewModel : ContentViewModel
+    @Environment (\.presentationMode) var mode
     var achivement: Achivement
     
     var body: some View
@@ -53,5 +54,10 @@ struct AchivementView: View
         {
             viewModel.GetCommentsList(achivementId: achivement.id)
         }
+        .onBackSwipe
+        {
+            mode.wrappedValue.dismiss()
+        }
+        .navigationBarHidden(true)
     }
 }

@@ -26,6 +26,7 @@
 		CED4C7382A0F22150067771D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CED4C7372A0F22150067771D /* Alamofire */; };
 		CED4C73B2A0F264E0067771D /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4C73A2A0F264E0067771D /* GameCard.swift */; };
 		CED4C73D2A0F2D370067771D /* CommentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4C73C2A0F2D370067771D /* CommentCardView.swift */; };
+		CED4C7402A0F362D0067771D /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4C73F2A0F362D0067771D /* ViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		CED4C7392A0F24F30067771D /* Platinum-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Platinum-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CED4C73A2A0F264E0067771D /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
 		CED4C73C2A0F2D370067771D /* CommentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardView.swift; sourceTree = "<group>"; };
+		CED4C73F2A0F362D0067771D /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		CE62C7F829F66EA600E3BB50 /* Platinum.iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CED4C73E2A0F36130067771D /* Extensions */,
 				CED4C7392A0F24F30067771D /* Platinum-iOS-Info.plist */,
 				CE62C81729F67B3C00E3BB50 /* ViewModels */,
 				CE62C81629F67AFB00E3BB50 /* Views */,
@@ -135,6 +138,14 @@
 				CE62C81829F67B7200E3BB50 /* ContentViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CED4C73E2A0F36130067771D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CED4C73F2A0F362D0067771D /* ViewExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			files = (
 				CECDB12929FB9F8B00C267ED /* AchivementCardView.swift in Sources */,
 				CE62C7FC29F66EA600E3BB50 /* ContentView.swift in Sources */,
+				CED4C7402A0F362D0067771D /* ViewExt.swift in Sources */,
 				CECDB12D29FBABD900C267ED /* AchivementView.swift in Sources */,
 				CE62C80B29F675AD00E3BB50 /* Game.swift in Sources */,
 				CE62C81329F678C200E3BB50 /* TokenModel.swift in Sources */,

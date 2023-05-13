@@ -3,6 +3,7 @@ import SwiftUI
 struct GameView: View
 {
     @EnvironmentObject var viewModel : ContentViewModel
+    @Environment (\.presentationMode) var mode
     var game: GameCard
     
     var body: some View
@@ -64,7 +65,10 @@ struct GameView: View
             viewModel.GetGame(ggame: game)
             viewModel.GetAchivementList(gameId: game.id)
         }
-        .navigationTitle(Text(viewModel.game.name))
-        .navigationBarTitleDisplayMode(.inline)
+        .onBackSwipe
+        {
+            mode.wrappedValue.dismiss()
+        }
+        .navigationBarHidden(true)
     }
 }

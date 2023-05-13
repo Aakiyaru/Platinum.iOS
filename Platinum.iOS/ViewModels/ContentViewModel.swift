@@ -37,7 +37,9 @@ class ContentViewModel: ObservableObject
     func FindGameList(searchString: String){
         games = []
         AF
-            .request("http://aakiyaru23-001-site1.atempurl.com/games/search?searchString=\(searchString)")
+            .request("http://aakiyaru23-001-site1.atempurl.com/games/search",
+                     method: .get,
+                     parameters: ["searchString" : searchString])
             .responseDecodable(of: [GameCard].self) {response in
                 if response.value != nil{
                     self.games = response.value!
@@ -49,7 +51,8 @@ class ContentViewModel: ObservableObject
         print("game")
         
         AF
-            .request("http://aakiyaru23-001-site1.atempurl.com/games/\(ggame.id)")
+            .request("http://aakiyaru23-001-site1.atempurl.com/games/\(ggame.id)",
+                     method: .get)
             .responseDecodable(of: Game.self) {response in
                 if response.value != nil{
                     self.game = response.value!
@@ -61,7 +64,9 @@ class ContentViewModel: ObservableObject
         print("achivements list")
         achivements = []
         AF
-            .request("http://aakiyaru23-001-site1.atempurl.com/achivements?gameid=\(gameId)")
+            .request("http://aakiyaru23-001-site1.atempurl.com/achivements",
+                     method: .get,
+                     parameters: ["gameId":gameId])
             .responseDecodable(of: [Achivement].self) {response in
                 if response.value != nil{
                     self.achivements = response.value!
@@ -75,7 +80,9 @@ class ContentViewModel: ObservableObject
         comments = []
         
         AF
-            .request("http://aakiyaru23-001-site1.atempurl.com/comments?achivementId=\(achivementId)")
+            .request("http://aakiyaru23-001-site1.atempurl.com/comments",
+                     method: .get,
+                     parameters: ["achivementId":achivementId])
             .responseDecodable(of: [Comment].self) {response in
                 if response.value != nil{
                     self.comments = response.value!
