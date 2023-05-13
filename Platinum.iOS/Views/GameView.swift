@@ -3,7 +3,7 @@ import SwiftUI
 struct GameView: View
 {
     @EnvironmentObject var viewModel : ContentViewModel
-    var game: Game
+    var game: GameCard
     
     var body: some View
     {
@@ -50,7 +50,7 @@ struct GameView: View
                 {
                     ForEach(viewModel.achivements, id: \.self)
                     {achivement in
-                        NavigationLink(destination: AchivementView())
+                        NavigationLink(destination: AchivementView(achivement: achivement))
                         {
                             AchivementCardView(achivement: achivement)
                         }
@@ -62,7 +62,7 @@ struct GameView: View
         .onAppear
         {
             viewModel.GetGame(ggame: game)
-            viewModel.GetAchivementList(gameId: viewModel.game.id)
+            viewModel.GetAchivementList(gameId: game.id)
         }
         .navigationTitle(Text(viewModel.game.name))
         .navigationBarTitleDisplayMode(.inline)

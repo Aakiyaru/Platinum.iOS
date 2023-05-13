@@ -22,7 +22,7 @@ struct ContentView: View
                             .padding()
                         Button("Найти")
                         {
-                            viewModel.FindGameList()
+                            viewModel.FindGameList(searchString: search)
                         }
                         .padding()
                         .foregroundColor(.white)

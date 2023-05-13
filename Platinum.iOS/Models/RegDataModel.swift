@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct RegData: Hashable{
+struct RegData: Decodable, Hashable{
     var login: String
     var password: String
     var username: String

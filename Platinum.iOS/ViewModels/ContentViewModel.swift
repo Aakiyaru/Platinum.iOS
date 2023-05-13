@@ -1,7 +1,9 @@
 import Foundation
+import Alamofire
 
-class ContentViewModel: ObservableObject{
-    @Published var games : [Game] = []
+class ContentViewModel: ObservableObject
+{
+    @Published var games : [GameCard] = []
     @Published var game: Game = Game(
         id: 0,
         name: "",
@@ -11,13 +13,6 @@ class ContentViewModel: ObservableObject{
         realease: ""
     )
     @Published var achivements: [Achivement] = []
-    @Published var achivement: Achivement = Achivement(
-        id: 0,
-        name: "",
-        description: "",
-        gameId: 0,
-        icon: ""
-    )
     @Published var comments: [Comment] = []
     @Published var comment: Comment = Comment(
         id: 0,
@@ -25,60 +20,67 @@ class ContentViewModel: ObservableObject{
         achivementId: 0,
         text: ""
     )
+    @Published var userName: String = ""
     
     func GetGameList(){
         print("game list")
         games = []
-        games.append(Game(id: 1,
-                          name: "God of War",
-                          cover: "https://cdn1.epicgames.com/offer/3ddd6a590da64e3686042d108968a6b2/EGS_GodofWar_SantaMonicaStudio_S2_1200x1600-fbdf3cbc2980749091d52751ffabb7b7_1200x1600-fbdf3cbc2980749091d52751ffabb7b7",
-                          developer: "Santa Monica Studio",
-                          publisher: "",
-                          realease: ""))
-        games.append(Game(id: 2,
-                          name: "Red Dead Redemption 2",
-                          cover: "https://avatars.mds.yandex.net/get-mpic/5235182/img_id6251776639395582946.jpeg/orig",
-                          developer: "Rockstar Games",
-                          publisher: "Rockstar Games",
-                          realease: "21.11.2018"))
+        AF
+            .request("http://aakiyaru23-001-site1.atempurl.com/games")
+            .responseDecodable(of: [GameCard].self) {response in
+                if response.value != nil{
+                    self.games = response.value!
+                }
+            }
     }
     
-    func FindGameList(){
+    func FindGameList(searchString: String){
         games = []
-        games.append(Game(id: 2,
-                          name: "Red Dead Redemption 2",
-                          cover: "https://avatars.mds.yandex.net/get-mpic/5235182/img_id6251776639395582946.jpeg/orig",
-                          developer: "Rockstar Games",
-                          publisher: "",
-                          realease: ""))
+        AF
+            .request("http://aakiyaru23-001-site1.atempurl.com/games/search?searchString=\(searchString)")
+            .responseDecodable(of: [GameCard].self) {response in
+                if response.value != nil{
+                    self.games = response.value!
+                }
+            }
     }
     
-    func GetGame(ggame: Game){
+    func GetGame(ggame: GameCard){
         print("game")
-        game = ggame
+        
+        AF
+            .request("http://aakiyaru23-001-site1.atempurl.com/games/\(ggame.id)")
+            .responseDecodable(of: Game.self) {response in
+                if response.value != nil{
+                    self.game = response.value!
+                }
+            }
     }
     
     func GetAchivementList(gameId:Int){
         print("achivements list")
         achivements = []
-        if (gameId == 1)
-        {
-            achivements.append(Achivement(id: 1, name: "God of war ach", description: "dawda", gameId: 1, icon: ""))
-        }
-        else
-        {
-            achivements.append(Achivement(id: 2, name: "RDR2 ach", description: "wdas", gameId: 2, icon: ""))
-        }
+        AF
+            .request("http://aakiyaru23-001-site1.atempurl.com/achivements?gameid=\(gameId)")
+            .responseDecodable(of: [Achivement].self) {response in
+                if response.value != nil{
+                    self.achivements = response.value!
+                }
+            }
         
-    }
-    
-    func GetAchivement(gameId:Int, id:Int){
-        print("achivement")
-        achivement = achivements[0]
     }
     
     func GetCommentsList(achivementId: Int){
         print("comments list")
+        comments = []
+        
+        AF
+            .request("http://aakiyaru23-001-site1.atempurl.com/comments?achivementId=\(achivementId)")
+            .responseDecodable(of: [Comment].self) {response in
+                if response.value != nil{
+                    self.comments = response.value!
+                }
+            }
     }
     
     func AddComment(userId: Int, text: String, AchivementId: Int){

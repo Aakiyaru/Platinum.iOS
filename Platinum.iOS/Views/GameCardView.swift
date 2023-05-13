@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct GameCardView: View{
-    var game: Game
+    var game: GameCard
     
     var body: some View{
         HStack{
@@ -27,9 +27,6 @@ struct GameCardView: View{
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
                     .bold()
-                Text(game.developer)
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.leading)
             }
         }
     }

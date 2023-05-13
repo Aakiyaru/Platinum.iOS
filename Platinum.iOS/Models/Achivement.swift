@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Achivement: Hashable{
+struct Achivement: Decodable, Hashable{
     var id: Int
     var name: String
     var description: String
