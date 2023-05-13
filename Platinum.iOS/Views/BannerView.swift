@@ -1,10 +1,3 @@
-//
-//  BannerView.swift
-//  Platinum.iOS
-//
-//  Created by User on 28.04.2023.
-//
-
 import Foundation
 import SwiftUI
 
