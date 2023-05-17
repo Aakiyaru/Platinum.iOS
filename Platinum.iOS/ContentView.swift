@@ -2,8 +2,14 @@ import SwiftUI
 
 struct ContentView: View
 {
-    @State var search: String = ""
     @EnvironmentObject var viewModel: ContentViewModel
+    
+    @State var login: String = ""
+    @State var pass: String = ""
+    @State var username: String = ""
+    @State var screenStatement = "auth"
+    @State var search: String = ""
+    @State private var showMsg: Bool = false
     
     var body: some View
     {

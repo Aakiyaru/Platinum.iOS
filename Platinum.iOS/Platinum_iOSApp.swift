@@ -7,7 +7,7 @@ struct Platinum_iOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(viewModel)
+                .environmentObject(viewModel) //ViewModel как EnvironmentObject для передачи данных между экранами
         }
     }
 }

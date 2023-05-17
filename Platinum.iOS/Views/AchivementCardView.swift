@@ -1,11 +1,14 @@
 import Foundation
 import SwiftUI
 
-struct AchivementCardView: View{
+struct AchivementCardView: View
+{
     var achivement: Achivement
     
-    var body: some View{
-        HStack{
+    var body: some View
+    {
+        HStack
+        {
             AsyncImage(url: URL(string: achivement.icon)) { image in
                     image
                         .resizable()
@@ -14,7 +17,8 @@ struct AchivementCardView: View{
                 }
                 .frame(width: 70, height: 70)
             
-            VStack(alignment: .leading){
+            VStack(alignment: .leading)
+            {
                 Text(achivement.name)
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
@@ -23,7 +27,6 @@ struct AchivementCardView: View{
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.leading)
             }
-            
         }
     }
 }

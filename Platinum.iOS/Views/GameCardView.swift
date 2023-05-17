@@ -1,11 +1,14 @@
 import Foundation
 import SwiftUI
 
-struct GameCardView: View{
+struct GameCardView: View
+{
     var game: GameCard
     
-    var body: some View{
-        HStack{
+    var body: some View
+    {
+        HStack
+        {
             AsyncImage(url: URL(string: game.cover)) { image in
                     image
                         .resizable()
@@ -15,7 +18,8 @@ struct GameCardView: View{
                 .frame(width: 70, height: 100)
                 .background(Color.gray)
             
-            VStack(alignment: .leading){
+            VStack(alignment: .leading)
+            {
                 Text(game.name)
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
