@@ -27,6 +27,7 @@ class ContentViewModel: ObservableObject
         achivementId: 0,
         text: ""
     )
+    @Published var userId: Int = Int.random(in: 1...1000)
     
     //функция, которая получает список игр с сервера
     func GetGameList()
@@ -113,23 +114,17 @@ class ContentViewModel: ObservableObject
     
     //отправляет введённый комментарий на сервер
     //TODO: - сделать ввод комментариев
-    func AddComment(userId: Int, text: String, AchivementId: Int)
-    {
-        print("add comment")
-    }
-    
-    func RegUser(login: String, username: String, password: String) -> Bool
+    func AddComment(text: String, AchivementId: Int)
     {
         AF
-            .request("http://aakiyaru23-001-site1.atempurl.com/users/reg",
+            .request("http://aakiyaru23-001-site1.atempurl.com/comments",
                      method: .post,
-                     parameters: ["login": login, "username": username, "password": password])
-        
-        return true
-    }
-    
-    func CheckAuth()
-    {
-        
+                     parameters: ["userId" : self.userId,
+                                  "text" : text,
+                                  "AchivementId" : AchivementId],
+                     encoding: JSONEncoding.default)
+            .response {response in
+                
+            }
     }
 }
