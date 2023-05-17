@@ -10,6 +10,7 @@ struct ContentView: View
     @State var screenStatement = "auth"
     @State var search: String = ""
     @State private var showMsg: Bool = false
+    @FocusState var isFoc: Bool
     
     var body: some View
     {
@@ -23,12 +24,19 @@ struct ContentView: View
                         .padding(-10)
                     HStack
                     {
-                        TextField("Поиск", text:$search)
+                        TextField("Поиск", text:$search, onEditingChanged: {changed in
+                            if(changed)
+                            {
+                                viewModel.GetGameList()
+                            }
+                        })
+                        .focused($isFoc)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding()
                         Button("Найти")
                         {
                             viewModel.FindGameList(searchString: search)
+                            isFoc = false
                         }
                         .padding()
                         .foregroundColor(.white)
